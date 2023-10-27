@@ -4,6 +4,8 @@
   <title>Simplicity Tenant Portal Info Center</title>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="./assets/logo.svg">
+  
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -14,11 +16,11 @@
       <span class="sr-only">Your Company</span>
       <img class="h-12 w-auto" src="./assets/logo.svg" alt="">
     </a>
-    <div class="flex lg:hidden" id="mobile-open-menu-btn" >
+    <div class="flex lg:hidden" id="mobile-open-menu-btn">
       <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-700">
         <span class="sr-only">Open main menu</span>
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
         </svg>
       </button>
     </div>
@@ -32,8 +34,9 @@
   <!-- Mobile menu, show/hide based on menu open state. -->
   <div class="lg:hidden" role="dialog" aria-modal="true">
     <!-- Background backdrop, show/hide based on slide-over state. -->
-<!--    <div class="fixed inset-0 z-10"></div>-->
-    <div class="fixed hidden inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10" id="mobile-menu-content">
+    <!--    <div class="fixed inset-0 z-10"></div>-->
+    <div class="fixed hidden inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10"
+         id="mobile-menu-content">
       <div class="flex items-center justify-between">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
@@ -42,7 +45,7 @@
         <button type="button" class="-m-2.5 rounded-md p-2.5 text-slate-700" id="mobile-close-menu-btn">
           <span class="sr-only">Close menu</span>
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
           </svg>
         </button>
       </div>
@@ -75,7 +78,7 @@
   </svg>
   <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
     <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-12">
-<!--      <img class="h-16" src="./assets/logo.svg" alt="Your Company">-->
+      <!--      <img class="h-16" src="./assets/logo.svg" alt="Your Company">-->
       <h1 class="mt-20 text-4xl font-bold sm:text-6xl text-slate-700">Welcome to Simplicity Tenant Portal Info Center</h1>
       <p class="mt-8 text-xl leading-8 text-slate-600">Discover how to use your tenant portal. Watch our introduction and step-by-step guide.</p>
     </div>
@@ -353,17 +356,15 @@
   </div>
 </footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+        crossorigin="anonymous"></script>
 <script>
   $(function() {
-    console.log( "ready!" );
     $('#mobile-close-menu-btn').on('click', function(e) {
-      console.log('close menu');
       e.preventDefault();
       $('#mobile-menu-content').addClass('hidden');
     });
     $('#mobile-open-menu-btn').on('click', function(e) {
-      console.log('open menu');
       e.preventDefault();
       $('#mobile-menu-content').removeClass('hidden');
     });
