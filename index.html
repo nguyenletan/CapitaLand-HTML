@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="bg-white">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <a href="#" class="-m-1.5 p-1.5">
+      <span class="sr-only">Your Company</span>
+      <img class="h-12 w-auto" src="./assets/logo.svg" alt="">
+    </a>
+    <div class="flex lg:hidden" id="mobile-open-menu-btn" >
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-700">
+        <span class="sr-only">Open main menu</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="#" class="text-md font-semibold leading-6 text-slate-700">About</a>
+      <a href="#" class="text-md font-semibold leading-6 text-slate-700">Functions</a>
+      <a href="#" class="text-md font-semibold leading-6 text-slate-700">Videos</a>
+      <a href="#" class="text-md font-semibold leading-6 text-slate-700">Contact Us</a>
+    </div>
+  </nav>
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <div class="lg:hidden" role="dialog" aria-modal="true">
+    <!-- Background backdrop, show/hide based on slide-over state. -->
+<!--    <div class="fixed inset-0 z-10"></div>-->
+    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10" id="mobile-menu-content">
+      <div class="flex items-center justify-between">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your Company</span>
+          <img class="h-8 w-auto" src="./assets/logo.svg" alt="">
+        </a>
+        <button type="button" class="-m-2.5 rounded-md p-2.5 text-slate-700" id="mobile-close-menu-btn">
+          <span class="sr-only">Close menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-slate-500/10">
+          <div class="space-y-2 py-6">
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-slate-50">Product</a>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-slate-50">Features</a>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-slate-50">Marketplace</a>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-slate-50">Company</a>
+          </div>
+          <div class="py-6">
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-slate-900 hover:bg-slate-50">Log in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="relative isolate overflow-hidden bg-white">
+  <svg class="absolute inset-0 -z-10 h-full w-full stroke-slate-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+       aria-hidden="true">
+    <defs>
+      <pattern id="0787a7c5-978c-4f66-83c7-11c213f99cb7" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+        <path d="M.5 200V.5H200" fill="none"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" stroke-width="0" fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"/>
+  </svg>
+  <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+    <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-12">
+<!--      <img class="h-16" src="./assets/logo.svg" alt="Your Company">-->
+      <h1 class="mt-20 text-4xl font-bold sm:text-6xl text-slate-700">Welcome to Simplicity Tenant Portal Info Center</h1>
+      <p class="mt-8 text-xl leading-8 text-slate-600">Discover how to use your tenant portal. Watch our introduction and step-by-step guide.</p>
+    </div>
+    <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-4 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-24">
+      <div class="max-w-full flex-none xl:max-w-5xl 2xl:max-w-none">
+        <img src="./assets/hero-banner.webp" alt="App screenshot"
+             class="h-auto lg:h-[38rem] xl:h-[38rem] rounded-md shadow-2xl ring-1 ring-slate-900/10">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+    class="mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8 mx-auto grid h-full min-h-[50vh] xl:min-h-[65vh] w-full grid-cols-1 items-start gap-x-24 gap-y-6 lg:grid-cols-2">
+  <img
+      src="https://material-taillwind-pro-ct-tailwind-team.vercel.app/image/blog-5.jpeg"
+      alt="blog"
+      class="col-span-1 h-full w-full rounded-lg object-cover shadow-md lg:h-[16rem]"
+  />
+  <div class="col-span-1">
+    <h2 class="mb-3 block font-sans !text-2xl font-semibold !leading-snug tracking-normal text-slate-700 antialiased lg:!text-3xl">
+      Simplicity Tenant Portal
+    </h2>
+    <p class="mb-4 block w-full font-sans text-lg font-normal leading-relaxed text-inherit !text-slate-500 antialiased">
+      Learn how to use the Simplicity® Tenant Portal to view your contract details, download your financial documents. See how to submit renovation
+      permits and requests.
+    </p>
+    <p class="mb-4 block w-full font-sans text-lg font-normal leading-relaxed text-inherit !text-slate-500 antialiased">
+      See how to use the portal access and manage your tenant account. Contract details, customer user, permit request, Adhoc utility
+      request/cancellation, bills and notices,
+      e-forms, announcements.
+    </p>
+  </div>
+</div>
+
+<div class="bg-slate-100 mx-auto mt-8 py-10 sm:py-16">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="mx-auto lg:mx-0">
+      <h2 class="mb-3 block font-sans !text-2xl font-semibold !leading-snug tracking-normal text-slate-700 antialiased lg:!text-3xl">
+        Functions of Simplicity® Tenant Portal:
+      </h2>
+    </div>
+    <ul role="list"
+        class="mx-auto mt-20 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <li class="grid place-items-center">
+        <div class="relative flex w-auto max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-slate-700 shadow-md h-full">
+          <div class="relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-slate-900 bg-clip-border text-white shadow-lg shadow-slate-900/20">
+            <img
+                src="./assets/contract-detail.webp"
+                alt="img-blur-shadow"
+                class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="mt-1 mb-2 block font-sans text-2xl font-medium leading-snug tracking-normal text-slate-700 antialiased">
+              Contract Details
+            </h4>
+            <p class="mb-6 block font-sans text-base font-normal leading-relaxed text-slate-700 antialiased sm:min-h-[7rem]">
+              View your Lease/License/Utility Contract details and update Contact listing
+            </p>
+            <div class="flex gap-6">
+              <a href="#" target="_blank">
+                <img src="./assets/play-video.svg" alt="play video"
+                     class="w-[45px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+              <a href="#" target="_blank">
+                <img src="./assets/pdf.svg" alt="play video"
+                     class="w-[40px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="grid place-items-center">
+        <div class="relative flex w-auto max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-slate-700 shadow-md h-full">
+          <div class="relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-slate-900 bg-clip-border text-white shadow-lg shadow-slate-900/20">
+            <img
+                src="assets/customer-user-account.webp"
+                alt="img-blur-shadow"
+                class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="mt-1 mb-2 block font-sans text-2xl font-medium leading-snug tracking-normal text-slate-700 antialiased">
+              Customer User Account
+            </h4>
+            <p class="mb-6 block font-sans text-base font-normal leading-relaxed text-slate-700 antialiased sm:min-h-[7rem]">
+              Manage user accounts and grant the relevant access. Inactivation of accounts and reset of password.
+            </p>
+            <div class="flex gap-6">
+              <a href="#" target="_blank">
+                <img src="./assets/play-video.svg" alt="play video"
+                     class="w-[45px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+              <a href="#" target="_blank">
+                <img src="./assets/pdf.svg" alt="play video"
+                     class="w-[40px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="grid place-items-center">
+        <div class="relative flex w-auto max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-slate-700 shadow-md h-full">
+          <div class="relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-slate-900 bg-clip-border text-white shadow-lg shadow-slate-900/20">
+            <img
+                src="./assets/permit-requests.webp"
+                alt="img-blur-shadow"
+                class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="mt-1 mb-2 block font-sans text-2xl font-medium leading-snug tracking-normal text-blue-slate-900 antialiased">
+              Permit Request
+            </h4>
+            <p class="mb-6 block font-sans text-base font-normal leading-relaxed text-slate-700 antialiased sm:min-h-[7rem]">
+              Submit renovation permit request covering permit request, extension, permit work request, worker amendment.
+            </p>
+            <div class="flex gap-6">
+              <a href="#" target="_blank">
+                <img src="./assets/play-video.svg" alt="play video"
+                     class="w-[45px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+              <a href="#" target="_blank">
+                <img src="./assets/pdf.svg" alt="play video"
+                     class="w-[40px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="grid place-items-center">
+        <div class="relative flex w-auto max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-slate-700 shadow-md h-full">
+          <div class="relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-slate-900 bg-clip-border text-white shadow-lg shadow-slate-900/20">
+            <img
+                src="./assets/adhoc-utility-request.webp"
+                alt="img-blur-shadow"
+                class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="mt-1 mb-2 block font-sans text-2xl font-medium leading-snug tracking-normal text-blue-slate-900 antialiased">
+              Adhoc Utility Request
+            </h4>
+            <p class="mb-6 block font-sans text-base font-normal leading-relaxed text-slate-700 antialiased sm:min-h-[7rem]">
+              Submit Request for Ad Hoc Aircon Extension and Cancellation
+            </p>
+            <div class="flex gap-6">
+              <a href="#" target="_blank">
+                <img src="./assets/play-video.svg" alt="play video"
+                     class="w-[45px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+              <a href="#" target="_blank">
+                <img src="./assets/pdf.svg" alt="play video"
+                     class="w-[40px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="grid place-items-center">
+        <div class="relative flex w-auto max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-slate-700 shadow-md h-full">
+          <div class="relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-slate-900 bg-clip-border text-white shadow-lg shadow-slate-900/20">
+            <img
+                src="./assets/bills-and-notices.webp"
+                alt="img-blur-shadow"
+                class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="mt-1 mb-2 block font-sans text-2xl font-medium leading-snug tracking-normal text-blue-slate-900 antialiased">
+              Bills and Notices
+            </h4>
+            <p class="mb-6 block font-sans text-base font-normal leading-relaxed text-slate-700 antialiased sm:min-h-[7rem]">
+              Check your monthly bills and never miss an important notice.
+            </p>
+            <div class="flex gap-6">
+              <a href="#" target="_blank">
+                <img src="./assets/play-video.svg" alt="play video"
+                     class="w-[45px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+              <a href="#" target="_blank">
+                <img src="./assets/pdf.svg" alt="play video"
+                     class="w-[40px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="grid place-items-center">
+        <div class="relative flex w-auto max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-slate-700 shadow-md h-full">
+          <div class="relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-slate-900 bg-clip-border text-white shadow-lg shadow-slate-900/20">
+            <img
+                src="./assets/ticket.webp"
+                alt="img-blur-shadow"
+                class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="mt-1 mb-2 block font-sans text-2xl font-medium leading-snug tracking-normal text-blue-slate-900 antialiased">
+              Ticket
+            </h4>
+            <p class="mb-6 block font-sans text-base font-normal leading-relaxed text-slate-700 antialiased sm:min-h-[7rem]">
+              Whether it’s an incident, a compliment for a vendor or staff member, or a facility/building fault, you can easily submit service tickets
+              for assistance.
+            </p>
+            <div class="flex gap-6">
+              <a href="#" target="_blank">
+                <img src="./assets/play-video.svg" alt="play video"
+                     class="w-[45px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+              <a href="#" target="_blank">
+                <img src="./assets/pdf.svg" alt="play video"
+                     class="w-[40px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="grid place-items-center">
+        <div class="relative flex w-auto max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-slate-700 shadow-md h-full">
+          <div class="relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-slate-900 bg-clip-border text-white shadow-lg shadow-slate-900/20">
+            <img
+                src="https://material-taillwind-pro-ct-tailwind-team.vercel.app/img/features1.jpg"
+                alt="img-blur-shadow"
+                class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="mt-1 mb-2 block font-sans text-2xl font-medium leading-snug tracking-normal text-blue-slate-900 antialiased">
+              E-Form
+            </h4>
+            <p class="mb-6 block font-sans text-base font-normal leading-relaxed text-slate-700 antialiased sm:min-h-[7rem]">
+              Say goodbye to paperwork. Complete and submit forms online, whether you need maintenance or want to provide feedback.
+            </p>
+            <div class="flex gap-6">
+              <a href="#" target="_blank">
+                <img src="./assets/play-video.svg" alt="play video"
+                     class="w-[45px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+              <a href="#" target="_blank">
+                <img src="./assets/pdf.svg" alt="play video"
+                     class="w-[40px] select-none align-middle transition-all hover:opacity-75 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- More people... -->
+    </ul>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer aria-labelledby="footer-heading" class="relative bg-slate-900">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+  <div class="mx-auto max-w-7xl px-6 pb-8 pt-4 lg:px-8">
+    <div class="border-t border-white/50 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex space-x-6">
+        <a href="#" class="text-slate-500 hover:text-slate-400">
+          <span>About</span>
+        </a>
+        <a href="#" class="text-slate-500 hover:text-slate-400">
+          <span>Functions</span>
+        </a>
+        <a href="#" class="text-slate-500 hover:text-slate-400">
+          <span>Videos</span>
+        </a>
+        <a href="#" class="text-slate-500 hover:text-slate-400">
+          <span>Contact us</span>
+        </a>
+      </div>
+      <p class="mt-8 text-xs leading-5 text-slate-400 md:mt-0">&copy; 2023 Anacle Systems. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<script>
+  $(function() {
+    console.log( "ready!" );
+    $('#mobile-close-menu-btn').on('click', function(e) {
+      console.log('close menu');
+      e.preventDefault();
+      $('#mobile-menu-content').addClass('hidden');
+    });
+    $('#mobile-open-menu-btn').on('click', function(e) {
+      console.log('open menu');
+      e.preventDefault();
+      $('#mobile-menu-content').removeClass('hidden');
+    });
+  });
+</script>
+</html>
