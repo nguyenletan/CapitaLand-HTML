@@ -7,14 +7,16 @@
   <link rel="icon" type="image/x-icon" href="./assets/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         fontFamily: {
-          'sans': ['Arial', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          'sans': ['Noto Sans', 'Helvetica Neue', 'Arial', 'sans-serif'],
         },
       },
     };
@@ -77,10 +79,10 @@
 
 <section>
   <div class="relative h-[700px] w-full bg-[url('./assets/hero-banner.webp')] bg-cover bg-top bg-no-repeat">
-    <div class="absolute inset-0 h-full w-full bg-black/20"></div>
+<!--    <div class="absolute inset-0 h-full w-full bg-black/20"></div>-->
     <div class="grid mx-auto h-[700px] px-8 max-w-7xl">
-      <div class="container relative z-1 my-auto max-w-[42rem] bg-white py-6 px-6 rounded-xl shadow-md shadow-slate-900/20">
-        <h1 class="block font-sans text-3xl font-bold sm:text-5xl !leading-tight text-sky-800 antialiased tracking-normal">
+      <div class="container relative z-1 my-auto max-w-[36rem] bg-white py-6 px-6 rounded-xl">
+        <h1 class="block font-sans text-3xl font-bold sm:text-5xl !leading-tight text-sky-900 antialiased tracking-normal">
           Welcome to Simplicity® Tenant Portal Info Centre
         </h1>
         <p class="mt-6 block w-full max-w-full font-sans text-2xl sm:text-3xl !leading-tight font-normal antialiased lg:max-w-[42rem]">
@@ -91,20 +93,28 @@
   </div>
 </section>
 
-<div id="about-us"
-     class="mt-16 max-w-7xl px-6 sm:mt-16 lg:px-8 mx-auto grid h-full w-full grid-cols-1 items-start gap-x-24 gap-y-6 lg:grid-cols-2">
-  <a href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4" target="_blank" class="text-center">
-    <img
-        src="./assets/simplicity-tenant-portal-video-image.webp"
-        alt="blog"
-        class="col-span-1 h-full w-full rounded-lg object-cover shadow-md lg:h-[16rem]"
-    />
-    <span class="text-sm">Watch the full video introduction of the Tenant Portal</span>
-  </a>
+<section class="border border-b-gray-300 pb-3">
+  <ul class="flex max-w-6xl mx-auto mt-3">
+    <li class="flex-auto border border-white border-e-gray-300 text-center"><a href="#getting-started">Getting Started</a></li>
+    <li class="flex-auto border border-white border-e-gray-300 text-center"><a href="#step-by-step">Step-by-Step</a></li>
+    <li class="flex-auto border border-white border-e-gray-300 text-center"><a target="_blank" href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4">Contract Details</a></li>
+    <li class="flex-auto border border-white border-e-gray-300 text-center"><a target="_blank" href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4">Customer User Account</a></li>
+    <li class="flex-auto border border-white border-e-gray-300 text-center"><a target="_blank" href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4">Permit Request</a></li>
+    <li class="flex-auto border border-white border-e-gray-300 text-center"><a target="_blank" href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4">Ad hoc Utility Request</a></li>
+    <li class="flex-auto border border-white border-e-gray-300 text-center"><a target="_blank" href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4">Bills & Notices</a></li>
+    <li class="flex-auto border border-white border-e-gray-300 text-center"><a target="_blank" href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4">Ticket</a></li>
+    <li class="flex-auto text-center"><a target="_blank" href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4">E-Form</a></li>
+  </ul>
+</section>
+
+<section id="about-us"
+     class="mt-16 max-w-7xl px-6 sm:mt-16 lg:px-8 mx-auto grid h-full w-full grid-cols-1 items-start gap-x-16 gap-y-6 lg:grid-cols-2">
   <div class="col-span-1">
-    <h2 class="mb-3 block font-sans !text-2xl font-bold !leading-snug tracking-normal text-slate-700 antialiased lg:!text-3xl">
-      Simplicity® Tenant Portal
+    <p class="font-bold text-sm text-gray-500 pb-1">Simplicity® Tenant Portal</p>
+    <h2 class="mb-1 block font-sans !text-2xl font-bold !leading-snug tracking-normal text-slate-700 antialiased lg:!text-3xl">
+      Introduction to Tenant Portal
     </h2>
+    <p class="text-sm mb-3 text-gray-700">Click on Watch Demo to get started</p>
     <p class="mb-4 block w-full font-sans text-lg font-normal leading-relaxed text-inherit antialiased">
       Learn how to use the Simplicity® Tenant Portal to view your contract details, download your billing related notices/documents, submit service
       ticket, renovation permit and ad hoc utility request.
@@ -113,13 +123,159 @@
       Also, learn how to create new user accounts, manage the accounts access to the portal, view Announcements and download E-Forms from us.
     </p>
   </div>
-</div>
+  <a href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4" target="_blank" class="text-center">
+    <img
+        src="./assets/simplicity-tenant-portal-video-image.webp"
+        alt="blog"
+        class="col-span-1 w-full rounded-lg object-cover shadow-md"
+    />
+    <span class="text-sm">Watch the full video introduction of the Tenant Portal</span>
+  </a>
+</section>
 
-<div class="mx-auto mt-20" id="functions">
+<section id="getting-started"
+     class="mt-16 max-w-7xl px-6 sm:mt-16 lg:px-8 mx-auto grid h-full w-full grid-cols-1 items-start gap-x-16 gap-y-6 lg:grid-cols-2">
+  <a id="step-01-image-wrapper"
+     href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4" target="_blank" class="text-center image-wrapper">
+    <img
+        src="assets/get-started-01.webp"
+        alt="get started 01"
+        class="col-span-1 w-full rounded-lg object-cover shadow-md"
+    />
+  </a>
+  <a id="step-02-image-wrapper"
+     href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4" target="_blank" class="hidden text-center image-wrapper">
+    <img
+        src="assets/get-started-02.webp"
+        alt="get started 02"
+        class="col-span-1 w-full rounded-lg object-cover shadow-md"
+    />
+  </a>
+  <a id="step-03-image-wrapper"
+      href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4" target="_blank" class="hidden text-center image-wrapper">
+    <img
+        src="assets/get-started-03.webp"
+        alt="get started 03"
+        class="col-span-1 w-full rounded-lg object-cover shadow-md"
+    />
+  </a>
+  <a id="step-04-image-wrapper"
+     href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4" target="_blank" class="hidden text-center image-wrapper">
+    <img
+        src="assets/get-started-04.webp"
+        alt="get started 04"
+        class="col-span-1 w-full rounded-lg object-cover shadow-md"
+    />
+  </a>
+  <a id="step-05-image-wrapper"
+     href="https://www.lastfootprint.com/building-asset-maintenance-anagement.mp4" target="_blank" class="hidden text-center image-wrapper">
+    <img
+        src="assets/get-started-05.webp"
+        alt="get started 05"
+        class="col-span-1 w-full rounded-lg object-cover shadow-md"
+    />
+  </a>
+  <div class="col-span-1">
+    <p class="font-bold text-sm text-gray-500 pb-1">Simplicity® Tenant Portal</p>
+    <h2 class="mb-1 block font-sans !text-2xl font-bold !leading-snug tracking-normal text-slate-700 antialiased lg:!text-3xl">
+      Getting Started
+    </h2>
+    <p class="text-xl font-semibold mb-3 text-sky-800">Your step-by-step guide to get access to your Simplicity® Tenant Portal for new customers.</p>
+    <p>Click on numbers to view screens.</p>
+    <ul role="list" class="mt-5" id="step-by-step">
+      <li id="step-01 active" rel="01">
+        <div class="relative pb-8">
+          <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+          <div class="relative flex space-x-3 cursor-pointer">
+            <div>
+              <span class="number text-white bg-sky-800 h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-white">
+                1
+              </span>
+            </div>
+            <div class="flex min-w-0 flex-1 justify-between space-x-4">
+              <div>
+                <p class="">The first time you log in to the system, it will run a validation check on your online tenant portal account. This validation is done from your email that you have received previously.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li id="step-02" rel="02">
+        <div class="relative pb-8">
+          <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+          <div class="relative flex space-x-3 cursor-pointer">
+            <div>
+              <span class="number h-8 w-8 rounded-full bg-gray-100 flex items-center justify-center ring-8 ring-white">
+                2
+              </span>
+            </div>
+            <div class="flex min-w-0 flex-1 justify-between space-x-4">
+              <div>
+                <p class="">Please click on the link in your email from the Tenant portal will take you to the following ‘Reset Password’ prompt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li id="step-03"  rel="03">
+        <div class="relative pb-8">
+          <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+          <div class="relative flex space-x-3 cursor-pointer">
+            <div>
+              <span class="number h-8 w-8 rounded-full bg-gray-100  flex items-center justify-center ring-8 ring-white">
+                3
+              </span>
+            </div>
+            <div class="flex min-w-0 flex-1 justify-between space-x-4">
+              <div>
+                <p class="">Please type in a password remembering to have lower and capital letters numbers. You will have to do this twice once done click the ‘Reset Password’ prompt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li id="step-04" rel="04">
+        <div class="relative pb-8">
+          <span class="absolute left-4 top-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+          <div class="relative flex space-x-3 cursor-pointer">
+            <div>
+              <span class="number h-8 w-8 rounded-full bg-gray-100  flex items-center justify-center ring-8 ring-white">
+                4
+              </span>
+            </div>
+            <div class="flex min-w-0 flex-1 justify-between space-x-4">
+              <div>
+                <p class="">You will now be able to log in using your User Name and your new password.  Once you are in the Tenant Portal, you will be able to see.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li id="step-05" rel="05">
+        <div class="relative pb-8">
+          <div class="relative flex space-x-3 cursor-pointer">
+            <div>
+              <span class="number h-8 w-8 rounded-full bg-gray-100 flex items-center justify-center ring-8 ring-white">
+                5
+              </span>
+            </div>
+            <div class="flex min-w-0 flex-1 justify-between space-x-4">
+              <div>
+                <p class="">If you need further assistance, please click on the links below and you will be able to watch how to set up contract details, customer user account, permit request, ad hoc utility request, bills and notices, Service Tickets and E-form submission.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="mx-auto mt-20" id="functions">
   <div class="mx-auto max-w-7xl px-6">
     <div class="mx-auto lg:mx-0">
       <h2 class="mb-3 block font-sans !text-2xl font-bold !leading-snug tracking-normal text-slate-700 antialiased lg:!text-3xl">
-        Here’s a short video & guide of various functions inside Simplicity® Tenant Portal:
+        Here’s a short video & guide of various functions inside Simplicity® Tenant Portal
       </h2>
     </div>
     <ul role="list"
@@ -358,7 +514,7 @@
       </li>
     </ul>
   </div>
-</div>
+</section>
 
 <div class="mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8 mx-auto" id="contact-us">
   <h2 class="mb-3 block font-sans !text-2xl font-bold !leading-snug tracking-normal text-slate-700 antialiased lg:!text-3xl">Contact Us</h2>
@@ -398,6 +554,21 @@
     $('#mobile-open-menu-btn').on('click', function(e) {
       e.preventDefault();
       $('#mobile-menu-content').removeClass('hidden');
+    });
+    
+    $('#step-by-step li').on('click', function(e) {
+      e.preventDefault();
+      console.log('aaaa');
+      $('#step-by-step li').removeClass('active');
+      $('#step-by-step li .number').removeClass('text-white bg-sky-800');
+      $('#step-by-step li .number').addClass('bg-gray-100');
+      $('#getting-started .image-wrapper').addClass('hidden');
+      const $this = $(this);
+      const rel = $this.attr('rel');
+      $this.addClass('active');
+      console.log($('.number', this));
+      $('.number', this).addClass('text-white bg-sky-800').removeClass('bg-gray-100');
+      $(`#getting-started #step-${rel}-image-wrapper`).removeClass('hidden');
     });
   });
 </script>
