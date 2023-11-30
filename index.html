@@ -246,7 +246,7 @@
               </div>
               <div class="flex min-w-0 flex-1 justify-between space-x-4">
                 <div>
-                  <p class="">You will now be able to login to Tenant Portal (click <a href="https://capitalandprd.simplicity.anacle.com/tenantportalprd-sg/" target="_blank" class="text-sky-600 font-bold underline">here</a> to access) using your Login Name and your new password.</p>
+                  <p class="">You will now be able to login to Tenant Portal (click <a id="tenant-portal-login-link" href="https://capitalandprd.simplicity.anacle.com/tenantportalprd-sg/" target="_blank" class="text-sky-600 font-bold underline">here</a> to access) using your Login Name and your new password.</p>
                 </div>
               </div>
             </div>
@@ -559,8 +559,6 @@
     });
     
     $('#step-by-step li').on('click', function(e) {
-      e.preventDefault();
-      console.log('aaaa');
       $('#step-by-step li').removeClass('active');
       $('#step-by-step li .number').removeClass('text-white bg-sky-800');
       $('#step-by-step li .number').addClass('bg-gray-100');
