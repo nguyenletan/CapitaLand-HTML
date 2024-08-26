@@ -23,7 +23,6 @@
   </script>
 </head>
 <body>
-
 <header class="bg-white">
   <nav class="mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">
     <a href="#" class="-m-1.5 p-1.5">
@@ -518,9 +517,10 @@
   </section>
 
   <div class="mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8 mx-auto" id="contact-us">
-    <h2 class="mb-3 block font-sans !text-2xl font-bold !leading-snug tracking-normal text-slate-700 antialiased lg:!text-3xl">Contact Us</h2>
-    <p class="">If you encounter any issues with the Simplicity® Tenant Portal or have further queries, please drop an email to our friendly support at
-      <a class="text-sky-600 underline" href="mailto:tenantportal.helpdesk@capitaland.com">tenantportal.helpdesk@capitaland.com</a>.</p>
+    <h2 class="mb-4 block font-sans !text-2xl font-bold !leading-snug tracking-normal text-slate-700 antialiased lg:!text-3xl">Contact Us</h2>
+    <p class="mb-4">If you encounter any issues with the Simplicity® Tenant Portal or have further queries, please drop an email to our friendly support at
+    <p class="mb-2">(1) For Singapore - <a class="text-sky-600 underline" href="mailto:tenantportal.helpdesk@capitaland.com">tenantportal.helpdesk@capitaland.com</a></p>
+    <p>(2) For Malaysia - <a class="text-sky-600 underline" href="mailto:tenantportal.helpdesk.my@capitaland.com">tenantportal.helpdesk.my@capitaland.com</a></p>
   </div>
 </div>
 
@@ -549,24 +549,21 @@
         crossorigin="anonymous"></script>
 <script>
   $(function() {
-    $('#mobile-close-menu-btn').on('click', function(e) {
+    $('#mobile-close-menu-btn').click(function(e) {
       e.preventDefault();
       $('#mobile-menu-content').addClass('hidden');
     });
-    $('#mobile-open-menu-btn').on('click', function(e) {
+    $('#mobile-open-menu-btn').click(function(e) {
       e.preventDefault();
       $('#mobile-menu-content').removeClass('hidden');
     });
 
-    $('#step-by-step li').on('click', function(e) {
+    $('#step-by-step li').click(function() {
       $('#step-by-step li').removeClass('active');
-      $('#step-by-step li .number').removeClass('text-white bg-sky-800');
-      $('#step-by-step li .number').addClass('bg-gray-100');
+      $('#step-by-step li .number').removeClass('text-white bg-sky-800').addClass('bg-gray-100');
       $('#getting-started .image-wrapper').addClass('hidden');
-      const $this = $(this);
-      const rel = $this.attr('rel');
-      $this.addClass('active');
-      console.log($('.number', this));
+      const rel = $(this).attr('rel');
+      $(this).addClass('active');
       $('.number', this).addClass('text-white bg-sky-800').removeClass('bg-gray-100');
       $(`#getting-started #step-${rel}-image-wrapper`).removeClass('hidden');
     });
